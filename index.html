@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper cissor</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./script.js" defer></script>
 </head>
+
 <body>
-    <script src="./script.js"></script>
+    <div class="container  starting-game">
+        <h1>Rock, Paper, Scissors?</h1>
+        <div class="cards ">
+            <div class="card">
+                <h2>player</h2>
+                <div class="card__counter">
+                    <img class="player-image" src="./images/user.png" alt="">
+                    <span class="player-counter">score: 0</span>
+                </div>
+                <div class="card__choices player">
+                    <figure class="player-choice figure">
+                        <figcaption>rock</figcaption>
+                        <img src="./images/rock.png" alt="rock image">
+                    </figure>
+                    <figure class="player-choice figure">
+                        <figcaption>paper</figcaption>
+                        <img src="./images/paper.png" alt="paper image">
+                    </figure>
+                    <figure class="player-choice figure">
+                        <figcaption>scissors</figcaption>
+                        <img src="./images/scissors.png" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="card ">
+                <h2>droid</h2>
+                <div class="card__counter">
+                    <img class="droid-image" src="./images/robot.png" alt="">
+                    <span class="droid-counter">score: 0</span>
+                </div>
+                <div class="card__choices droid">
+                    <figure  class="droid-choice figure">
+                        <figcaption>rock</figcaption>
+                        <img src="./images/rock.png" alt="rock image"></figure>
+                    <figure class="droid-choice figure">
+                        <figcaption>paper</figcaption>
+                        <img src="./images/paper.png" alt="paper image">
+                    </figure class="droid-choice">
+                    <figure class="droid-choice figure">
+                        <figcaption >scissors</figcaption>
+                        <img src="./images/scissors.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="./sounds/clapping-sound.wav" class="clapping"></audio>
+    <audio src="./sounds/crying-sound.mp3" class="crying"></audio>
+    <audio src="./sounds/bot-win.wav" class="bot-win-round"></audio>
+    <audio src="./sounds/human-win.wav" class="human-win-round"></audio>
+    <audio src="./sounds/click.wav" class="click"></audio>
+    <audio src="./sounds/keyboard.mp3" class="keyboard-sound"></audio>
+    <button class="button button--start"> get started</button>
 </body>
+
 </html>
