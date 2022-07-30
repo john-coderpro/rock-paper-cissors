@@ -51,7 +51,6 @@ const setGameOver = function (droidScore, playerScore) {
     const button = document.createElement('button');
     const applause = document.querySelector('.clapping');
     const cries = document.querySelector('.crying');
-
     const card = document.querySelector('.cards');
     para.setAttribute('class', 'match');
     img.setAttribute('class', 'winner-image');
@@ -62,6 +61,7 @@ const setGameOver = function (droidScore, playerScore) {
     if (droidScore === playerScore) {
         para.textContent = 'no one wins it\'s s match!';
         button.innerHTML = 'play again?';
+        card.setAttribute('class', 'starting-game');
         body.appendChild(para);
         body.appendChild(button);
         return;
