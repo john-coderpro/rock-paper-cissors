@@ -51,7 +51,7 @@ h1 {
   justify-content: center;
   padding-bottom: 1.2em; }
 
-@media (max-width: 30em) {
+@media only screen and (max-width: 30em) {
   .cards {
     flex-flow: column; }
 
@@ -61,12 +61,13 @@ h1 {
   background-color: #454545;
   border-radius: 15px;
   display: flex;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
   flex-flow: column nowrap;
   height: 20em;
+  justify-content: space-around;
   max-width: 27em;
   padding: 1em 1em 3em;
-  width: 25em; }
+  width: 20em; }
   .card > h2 {
     text-transform: uppercase; }
   .card__counter {
@@ -76,11 +77,15 @@ h1 {
     justify-content: center;
     margin-bottom: 1em;
     text-transform: uppercase; }
+  .card .card__choices {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap; }
   .card figure {
     background-color: white;
     box-shadow: 5px 5px 0 0;
     color: black;
-    flex: 1 1 auto;
+    flex: 1 1;
     margin: 0;
     padding: .5em; }
     .card figure:hover {
@@ -102,8 +107,11 @@ h1 {
       margin-bottom: .2em;
       text-transform: uppercase; }
     .card__choices img {
-      width: 4em; }
+      width: 100%; }
 
+@media only screen and (max-width: 20em) {
+  .card {
+    width: 80vw; } }
 .player-image,
 .droid-image {
   height: 40px;
@@ -128,7 +136,7 @@ h1 {
   top: 50%;
   transform: translate3d(-50%, -50%, -1000px);
   opacity: 0;
-  animation: appear 1000ms ease-out 1060ms 1  forwards; }
+  animation: appear 1000ms ease-out 1060ms 1 forwards; }
   .button--start:hover {
     background-color: #e6e6e6;
     box-shadow: 4px 4px 0 0;

@@ -41,7 +41,7 @@ const hasId = function (node) {
         container.removeAttribute('class', 'starting-game');
         startButton.setAttribute('class', 'starting-game');
         const para = document.querySelector('p');
-        para.remove();
+        para.setAttribute('class', 'starting-game');
     });
 })();
 const setGameOver = function (droidScore, playerScore) {

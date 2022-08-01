@@ -31,7 +31,7 @@ h1 {
     font-size: 1.5rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top:  5em;
+    margin-top: 5em;
     text-align: center;
     color: hsl(0, 0, 71%);
 }
@@ -62,10 +62,11 @@ h1 {
     padding-bottom: 1.2em;
 }
 
-@media (max-width: 30em) {
+@media only screen and (max-width: 30em) {
     .cards {
         flex-flow: column;
     }
+
     .para {
         margin-top: 3em;
     }
@@ -75,12 +76,13 @@ h1 {
     background-color: $card-bg-color;
     border-radius: 15px;
     display: flex;
-    flex: 1 0 auto;
+    flex: 0 1 auto;
     flex-flow: column nowrap;
     height: 20em;
+    justify-content: space-around;
     max-width: 27em;
     padding: 1em 1em 3em;
-    width: 25em;
+    width: 20em;
 
     &>h2 {
         text-transform: uppercase;
@@ -95,11 +97,17 @@ h1 {
         text-transform: uppercase;
     }
 
+    .card__choices {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row nowrap;
+    }
+
     figure {
         background-color: $white-color;
         box-shadow: 5px 5px 0 0;
         color: black;
-        flex: 1 1 auto;
+        flex: 1 1;
         margin: 0;
         padding: .5em;
 
@@ -125,16 +133,21 @@ h1 {
 
 
 
-        & figcaption {
+        figcaption {
             font-size: .8rem;
             margin-bottom: .2em;
             text-transform: uppercase;
         }
 
-        & img {
-            width: 4em;
+        img {
+            width: 100%;
         }
 
+    }
+}
+@media only screen and (max-width: 20em) {
+    .card {
+        width: 80vw;
     }
 }
 
@@ -166,7 +179,7 @@ h1 {
     top: 50%;
     transform: translate3d(-50%, -50%, -1000px);
     opacity: 0;
-    animation: appear 1000ms ease-out 1060ms 1  forwards;
+    animation: appear 1000ms ease-out 1060ms 1 forwards;
 
     &:hover {
         background-color: darken($white-color, 10%);
@@ -180,6 +193,7 @@ h1 {
         transform: translate(-45%, -45%);
     }
 }
+
 @keyframes appear {
     100% {
         opacity: 1;
@@ -200,6 +214,7 @@ h1 {
 #round-loser-color {
     background-color: hsl(0, 100%, 60%);
 }
+
 .match {
     font-size: 1.5rem;
     text-transform: uppercase;
