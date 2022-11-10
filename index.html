@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper cissor</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="preload" as="image" href="./images/background.jpg">
     <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <div class="container  starting-game">
+    <div class="container  hide">
         <h1>Rock, Paper, Scissors?</h1>
         <div class="cards ">
             <div class="card">
@@ -21,16 +22,13 @@
                     <span class="player-counter">score: 0</span>
                 </div>
                 <div class="card__choices player">
-                    <figure class="player-choice figure">
-                        <figcaption>rock</figcaption>
+                    <figure class="player-choice figure" data-choice="rock" tabindex="0">
                         <img src="./images/rock.png" alt="rock image">
                     </figure>
-                    <figure class="player-choice figure">
-                        <figcaption>paper</figcaption>
+                    <figure class="player-choice figure" data-choice="paper" tabindex="0">
                         <img src="./images/paper.png" alt="paper image">
                     </figure>
-                    <figure class="player-choice figure">
-                        <figcaption>scissors</figcaption>
+                    <figure class="player-choice figure" data-choice="scissors" tabindex="0">
                         <img src="./images/scissors.png" alt="">
                     </figure>
                 </div>
@@ -42,15 +40,14 @@
                     <span class="droid-counter">score: 0</span>
                 </div>
                 <div class="card__choices droid">
-                    <figure  class="droid-choice figure">
-                        <figcaption>rock</figcaption>
-                        <img src="./images/rock.png" alt="rock image"></figure>
-                    <figure class="droid-choice figure">
-                        <figcaption>paper</figcaption>
+                    <figure  class="droid-choice figure" data-choice="rock">
+                        
+                        <img src="./images/rock.png" alt="rock image">
+                    </figure>
+                    <figure class="droid-choice figure" data-choice="paper">
                         <img src="./images/paper.png" alt="paper image">
                     </figure class="droid-choice">
-                    <figure class="droid-choice figure">
-                        <figcaption >scissors</figcaption>
+                    <figure class="droid-choice figure" data-choice="scissors">
                         <img src="./images/scissors.png" alt="">
                     </figure>
                 </div>

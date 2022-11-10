@@ -33,7 +33,7 @@ h1 {
     margin-right: auto;
     margin-top: 5em;
     text-align: center;
-    color: hsl(0, 0, 71%);
+    color: hsl(0, 0%, 71%);
 }
 
 .container {
@@ -66,7 +66,6 @@ h1 {
     .cards {
         flex-flow: column;
     }
-
     .para {
         margin-top: 3em;
     }
@@ -97,31 +96,10 @@ h1 {
         text-transform: uppercase;
     }
 
-    .card__choices {
+    &__choices {
         display: flex;
         justify-content: space-around;
         flex-flow: row nowrap;
-    }
-
-    figure {
-        background-color: $white-color;
-        box-shadow: 5px 5px 0 0;
-        color: black;
-        flex: 1 1;
-        margin: 0;
-        padding: .5em;
-
-        &:hover {
-            background-color: darken($white-color, 10%);
-            box-shadow: 4px 4px 0 0;
-            transform: translate(1px, 1px);
-        }
-
-        &:active {
-            background-color: darken($white-color, 10%);
-            box-shadow: none;
-            transform: translate(5px, 5px);
-        }
     }
 
     &__choices {
@@ -144,6 +122,26 @@ h1 {
         }
 
     }
+}
+figure {
+        background-color: $white-color;
+        box-shadow: 5px 5px 0 0;
+        color: black;
+        flex: 1 1;
+        margin: 0;
+        padding: .5em;
+
+        &:hover {
+            background-color: darken($white-color, 10%);
+            box-shadow: 4px 4px 0 0;
+            transform: translate(1px, 1px);
+        }
+
+        &:active {
+            background-color: darken($white-color, 10%);
+            box-shadow: none;
+            transform: translate(5px, 5px);
+        }
 }
 @media only screen and (max-width: 20em) {
     .card {
@@ -179,7 +177,8 @@ h1 {
     top: 50%;
     transform: translate3d(-50%, -50%, -1000px);
     opacity: 0;
-    animation: appear 1000ms ease-out 1060ms 1 forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: appear 1000ms ease-out 1800ms 1 forwards;
 
     &:hover {
         background-color: darken($white-color, 10%);
@@ -203,15 +202,15 @@ h1 {
 
 /* ********CLASSES FOR JAVASCRIPT INTERACTION *********/
 
-.starting-game {
+.hide {
     display: none;
 }
 
-#round-winner-color {
+.figure.round-winner-color {
     background-color: hsl(120, 100%, 55%);
 }
 
-#round-loser-color {
+.figure.round-loser-color {
     background-color: hsl(0, 100%, 60%);
 }
 
